@@ -1,4 +1,4 @@
-# Project Name: Water Drops
+# Project Name: Water Drops Server
 
 This site represents picnic related services in all over Bangladesh. The main goal of this site is you can explore picnic booking services and book your desire service. Also you can add new service if you find amazing picnic spot in our country.
 
