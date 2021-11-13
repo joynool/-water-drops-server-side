@@ -10,14 +10,18 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-//water-drops
-//l2mOpB6Ocf5sMxFJ
+/*------------------------------------------------
+            Database connection string
+--------------------------------------------------*/
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.iganj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function run ()
 {
     try {
+        /*------------------------------------------------
+                Established database connection
+        --------------------------------------------------*/
         await client.connect();
         const database = client.db('water-drops');
         const productsCollect = database.collection('products');
@@ -25,6 +29,9 @@ async function run ()
         const reviewsCollect = database.collection('reviews');
         const ordersCollect = database.collection('orders');
 
+        /*------------------------------------------------
+                Products data get, post and delete API
+        --------------------------------------------------*/
         app.get('/products', async (req, res) =>
         {
             const cursor = productsCollect.find({});
@@ -61,6 +68,9 @@ async function run ()
             res.json(result);
         });
 
+        /*------------------------------------------------
+                Reviews data get and post API
+        --------------------------------------------------*/
         app.post('/reviews', async (req, res) =>
         {
             const review = req.body;
@@ -75,6 +85,9 @@ async function run ()
             res.send(result);
         });
 
+        /*------------------------------------------------
+            Orders data get, post, put and delete API
+        --------------------------------------------------*/
         app.post('/orders', async (req, res) =>
         {
             const newOrder = req.body;
@@ -86,7 +99,7 @@ async function run ()
         {
             const cursor = ordersCollect.find({});
             const orders = await cursor.toArray();
-            res.send(orders)
+            res.send(orders);
         });
 
         app.put('/orders/:id', async (req, res) =>
@@ -121,6 +134,9 @@ async function run ()
             res.send(result);
         });
 
+        /*------------------------------------------------
+                Users data get, post and Admin put API
+        --------------------------------------------------*/
         app.post('/users', async (req, res) =>
         {
             const user = req.body;
