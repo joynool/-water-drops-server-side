@@ -2,7 +2,7 @@
 
 This site represents Niche Product Website not typical E-commerce site. This site creates using technology React, firebase, react router, node, express, mongodb etc. As user you can explore products, order them, review, etc and as admin you can add new products, delete and shipped all order, make admin power to others, etc.
 
-Check out my live site - [Water Drops](https://water-drops.web.app/).
+Check out my live site - [Water Drops](https://water-drops-8e4f3.web.app/).
 
 - Fully responsive and simple design
 - You can explore home page section, products section and reviews section also
