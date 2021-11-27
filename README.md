@@ -1,12 +1,9 @@
 # Project Name: Water Drops
 
-This site represents Niche Product Website not typical E-commerce site. This site creates using technology React, firebase, react router, node, express, mongodb etc. As user you can explore products, order them, review, etc and as admin you can add new products, delete and shipped all order, make admin power to others, etc.
+This site represents a Niche Product Website, not a typical E-commerce site. This site creates using technology React, firebase, react-router, node, express, MongoDB, etc. As a user, you can explore products, order them, review, etc and as an admin, you can add new products, delete and ship all orders, make admin power to others, etc.
 
-Check out my live site - [Water Drops](https://water-drops-8e4f3.web.app/).
+Check out live site - [Water Drops](https://water-drops-8e4f3.web.app/).
 
-- Fully responsive and simple design
-- You can explore home page section, products section and reviews section also
-- After login you can book any products to provide your shipping info.
-- After login You can check and cancel your order also share your review through Dashboard.
-- Admin have full power to delete or add any products and all orders also.
-- Admin have access to make new admin from any user.
+- As a user, you can explore all products, order them, cancel the order and review them after successful registration or login.
+- Admin has full power to add or delete any products, shipped or delete any orders, and also access to make new admin from any existing user.
+- Simple design with fully responsive for mobile devices and desktops.
